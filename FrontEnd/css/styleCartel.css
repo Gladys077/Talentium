@@ -13,7 +13,7 @@
     text-align: center;
     padding: 1.5em 1em;
     position: sticky;
-    z-index: 1;
+    z-index: 3;
     
     margin: auto;
     transform: translateY(50%);

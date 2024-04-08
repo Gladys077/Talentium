@@ -26,7 +26,8 @@ public class ClientMapper {
                 clientDTO.user(),
                 clientDTO.direction(),
                 clientDTO.rating(),
-                true
+                true,
+                null
                );
 
     }

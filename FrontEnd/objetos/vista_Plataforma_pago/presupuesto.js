@@ -1,7 +1,8 @@
 export class Presupuesto {
     constructor(dato, divPadre) {
+        console.log(dato)
         this.dato = dato;
-        this.divPadre = divPadre ?? document.querySelector(".contenidoRecuadro");
+        this.divPadre = document.querySelector(divPadre) ?? document.querySelector(".contenidoRecuadro");
         this.orden = `
                 <div class="resumen-compra">            
                     <h3>Resumen de Compra</h3>
@@ -10,8 +11,7 @@ export class Presupuesto {
                         <h4>${dato.professional.lastname}, ${dato.professional.name}<br>${dato.professional.rating} stars</h4>
                     </div>
                     <p>Servicio: ${dato.professional.profession}</p>
-                    <p>Visita: 30/03/24</p>
-                    <p>Precio: ${dato.price}</p>
+                    <p>Precio: ${dato.order.price}</p>
                 </div>
                 <div class="metodo-pago">
                             <div>
@@ -28,6 +28,8 @@ export class Presupuesto {
                             </div>
                 </div>
                 `;    
+
+                this.mostrarPresupuesto();
     }
 
     mostrarPresupuesto() {

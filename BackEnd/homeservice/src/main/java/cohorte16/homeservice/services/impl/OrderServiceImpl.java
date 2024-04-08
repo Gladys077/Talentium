@@ -2,6 +2,7 @@ package cohorte16.homeservice.services.impl;
 
 import cohorte16.homeservice.dtos.*;
 import cohorte16.homeservice.enums.Orderstatus;
+import cohorte16.homeservice.enums.Profession;
 import cohorte16.homeservice.exceptions.EntityNotSavedException;
 import cohorte16.homeservice.mappers.OrderMapper;
 import cohorte16.homeservice.models.Client;
@@ -167,6 +168,19 @@ public class OrderServiceImpl implements OrderService {
         }
     }
 
+
+    public OrderAceptedDTO orderFinalizada(Long id) {
+        try {
+            Order exintingOrder = orderRepository.findById(id)
+                    .orElseThrow(() -> new EntityNotFoundException("Order not found"));
+            exintingOrder.setOrderstatus(Orderstatus.Finalizada);
+            Order orderSaved = orderRepository.save(exintingOrder);
+            return orderMapper.orderToOrderAceptedDTO(orderSaved);
+        } catch (ServiceException e) {
+            throw new ServiceException(e.getMessage());
+        }
+    }
+
     /*
      * Revisar porque viajan null con entidades completas y no dto
      * */
@@ -212,6 +226,38 @@ public class OrderServiceImpl implements OrderService {
     public Page<Order> findOrdenesByClienteId(Long id, PageRequest pageRequest) {
         try {
         return orderRepository.findOrdenesByClienteId(id,pageRequest).map(Order::new);
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Page<Order> findOrdenesByProfesionalId(Long id, PageRequest pageRequest) {
+        try {
+            return orderRepository.findOrdenesByProfesionalId(id,pageRequest).map(Order::new);
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Page<ordenProfessionalList> findOrdenesByProfesionalIdPendiente(Long id,Orderstatus orderstatus, PageRequest pageRequest) {
+        try {
+            return  orderRepository.findOrdenesByProfesionalIdPendiente(id,  orderstatus, pageRequest);//.map(Order::new);
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Page<?> findOrdenesByClientIdPendiente(Long id, Orderstatus orderstatus, PageRequest pageRequest) {
+        try {
+            return orderRepository.findOrdenesByClientIdPendiente(id,  orderstatus, pageRequest);//.map(Order::new);
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Page<Order> findOrdenesByClientIdInitial(Long id, Orderstatus orderstatus, PageRequest pageRequest) {
+        try {
+            return orderRepository.findOrdenesByClientIdInitial(id,  orderstatus, pageRequest).map(Order::new);
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }

@@ -50,7 +50,8 @@ public class ProfessionalMapper {
                 professionalDTO.user(),
                 Collections.emptyList(),
                 Boolean.TRUE,
-                professionalDTO.wallet()
+                professionalDTO.wallet(),
+                null
         );
     }
 

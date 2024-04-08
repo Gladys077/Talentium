@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.util.List;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -56,7 +58,8 @@ public class Client {
     @Column(name = "activo")
     private Boolean active = true;
 
-
+   @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Order> client;
     public Client(ClientDTO clientDTO) {
 
         this.name = clientDTO.name();
@@ -66,5 +69,12 @@ public class Client {
         this.direction = clientDTO.direction();
         this.rating = clientDTO.rating();
 
+    }
+
+    public Client(Long id, String name, String lastname, String phone) {
+        this.id = id;
+        this.name = name;
+        this.lastname = lastname;
+        this.phone = phone;
     }
 }

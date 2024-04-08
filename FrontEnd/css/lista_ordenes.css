@@ -4,3 +4,5 @@
 @import url("styleCartel.css");
 @import url("profesionalListarOrden.css");
 @import url("profesionalAceptarOrden.css");
+@import url("../objetos/vista_Plataforma_pago/plataforma-pago.css");
+@import url("../objetos/vista_profesional_ordene_aprobada_por_el_cliente/style_cartelPuntuar.css");

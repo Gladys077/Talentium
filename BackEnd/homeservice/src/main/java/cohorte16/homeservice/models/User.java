@@ -35,6 +35,11 @@ public class User implements UserDetails {
         this.avatar = registroUsuarioDTO.avatar();
     }
 
+    public User(Long userId, String avatar) {
+        this.id = userId;
+        this.avatar = avatar;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));

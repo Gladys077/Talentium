@@ -3,6 +3,10 @@ import { Ordenes } from './conexiones/Ordenes.js';
 
 Util.existLogin();
 
+//saludo al usuario
+const saludo = document.querySelector('span');
+saludo.innerText = Util.reuperarLogin().name ?? 'usuario';
+
 //guardar pagina actual para poder volver con la flecha
 const buttons = document.querySelectorAll('li');
 buttons.forEach(li => li.addEventListener('click', () => Util.guardarPaginaActual()));

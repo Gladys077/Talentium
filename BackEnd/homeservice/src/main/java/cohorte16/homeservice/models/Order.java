@@ -2,6 +2,7 @@ package cohorte16.homeservice.models;
 
 import cohorte16.homeservice.dtos.OrderDTO;
 import cohorte16.homeservice.enums.Orderstatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
@@ -24,8 +25,9 @@ public class Order {
     @Column(name = "descripcion")
     private String description;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
     @JoinColumn(name = "profesional_id", referencedColumnName = "id")
+    @JsonIgnore
     private Professional professional;
 
     @Column(name = " descripcion_profesional")
@@ -43,8 +45,9 @@ public class Order {
     @Enumerated(value = EnumType.STRING)
     private Orderstatus orderstatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
     @JoinColumn(name = "cliente_id", referencedColumnName = "id")
+    @JsonIgnore
     private Client client;
 
     public Order(OrderDTO orderDTO){
@@ -62,4 +65,7 @@ public class Order {
         this.orderstatus = order.getOrderstatus();
         this.client = order.getClient();
     }
+
+
+
 }

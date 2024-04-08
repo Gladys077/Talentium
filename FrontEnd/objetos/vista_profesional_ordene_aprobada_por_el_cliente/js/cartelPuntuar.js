@@ -1,16 +1,24 @@
+import { Util } from '../../Util.js'
+import { cartelAviso } from '../../cartel_aceptar_cancelar/cartelAviso.js';
+
 export class CartelPuntuar {
-    constructor(ordenDto, divPadre) {
-        this.orden = ordenDto;
+    constructor(DtoIdClientOrProfessional, divPadre, isClientOrProfessionalDto) {
+        this.idClientOrProfessional = DtoIdClientOrProfessional;
         this.divPadre = divPadre ?? 'main';
         this.rating;
         this.div;
+        this.clientCalification = null;
+        this.professionalCalification = null;
+        this.agregarALFront();
+        this.isClientOrProfessional = isClientOrProfessionalDto;
+
     }
 
     crearCartel() {
 
         this.div = document.createElement('div');
         this.div.className = 'containerRating';
-        this.div.innerHTML=`
+        this.div.innerHTML = `
         <div class="info">
             <div class="emoji"></div>
             <div class="status"></div>
@@ -57,9 +65,9 @@ export class CartelPuntuar {
         const padre = document.querySelector(this.divPadre);
         padre.appendChild(this.crearCartel());
 
-       
 
-    /*-------Funcionalidades del cartelPuntuar-------*/
+
+        /*-------Funcionalidades del cartelPuntuar-------*/
 
 
         const stars = document.querySelectorAll(".star");
@@ -67,40 +75,40 @@ export class CartelPuntuar {
         const statusEl = document.querySelector(".status");
         const defaultRatingIndex = 0;
         let currentRatingIndex = 0;
-        
+
         const ratings = [
-        { emoji: "", name: "Tu opinión nos interesa  <br> ¿Cómo fue tu experiencia?" },
-        { emoji: "😔", name: "Mala" },
-        { emoji: "🙁", name: "Regular" },
-        { emoji: "🙂", name: "Buena" },
-        { emoji: "🤩", name: "Muy buena" },
-        { emoji: "🥰", name: "¡Excelente!" }
+            { emoji: "", name: "Tu opinión nos interesa  <br> ¿Cómo fue tu experiencia?" },
+            { emoji: "😔", name: "Mala" },
+            { emoji: "🙁", name: "Regular" },
+            { emoji: "🙂", name: "Buena" },
+            { emoji: "🤩", name: "Muy buena" },
+            { emoji: "🥰", name: "¡Excelente!" }
         ];
-        
+
         const checkSelectedStar = (star) => {
-        if (parseInt(star.getAttribute("data-rate")) === currentRatingIndex) {
-            return true;
-        } else {
-            return false;
-        }
+            if (parseInt(star.getAttribute("data-rate")) === currentRatingIndex) {
+                return true;
+            } else {
+                return false;
+            }
         };
-        
+
         const setRating = (index) => {
-        stars.forEach((star) => star.classList.remove("selected"));
-        if (index > 0 && index <= stars.length) {
-            document
-            .querySelector('[data-rate="' + index + '"]')
-            .classList.add("selected");
-        }
-        emojiEl.innerHTML = ratings[index].emoji;
-        statusEl.innerHTML = ratings[index].name;
+            stars.forEach((star) => star.classList.remove("selected"));
+            if (index > 0 && index <= stars.length) {
+                document
+                    .querySelector('[data-rate="' + index + '"]')
+                    .classList.add("selected");
+            }
+            emojiEl.innerHTML = ratings[index].emoji;
+            statusEl.innerHTML = ratings[index].name;
         };
-        
+
         const resetRating = () => {
-        currentRatingIndex = defaultRatingIndex;
-        setRating(defaultRatingIndex);
+            currentRatingIndex = defaultRatingIndex;
+            setRating(defaultRatingIndex);
         };
-        
+
         stars.forEach((star) => {
             star.addEventListener("click", () => { // Cambio aquí
                 if (checkSelectedStar(star)) {
@@ -112,24 +120,24 @@ export class CartelPuntuar {
                 setRating(index);
                 this.puntuar(index); // Cambio aquí
             });
-            
+
             star.addEventListener("mouseover", function () {
                 const index = parseInt(star.getAttribute("data-rate"));
                 setRating(index);
             });
-            
+
             star.addEventListener("mouseout", function () {
                 setRating(currentRatingIndex);
             });
-            });
-            
-            document.addEventListener("DOMContentLoaded", function () {
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
             setRating(defaultRatingIndex);
         });
-    
-    
 
-/*-------fin funcionalidades cartel-------*/
+
+
+        /*-------fin funcionalidades cartel-------*/
 
     }
 
@@ -141,25 +149,36 @@ export class CartelPuntuar {
     puntuar(estrellas) {
 
         this.rating = estrellas;
+        (this.isClientOrProfessional === 'client') ? this.clientCalification = this.rating : this.professionalCalification = this.rating;
+        
+        const url = `${Util.conexionBase()}/api/order/rating`;
+        let userData = {
+            id: this.idClientOrProfessional,
+            ratingClient: this.clientCalification,
+            ratingProfessional: this.professionalCalification
+        };
 
-        this.orden.orderstatus = 'FINALIZADA';
-        console.log(this.orden);
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer${Util.reuperarAuthorization()}`
+            },
+            body: JSON.stringify(userData)
+        }).then(response => response.json())
+            .then(data => {
+                new cartelAviso('Calificado', this.divPadre);
 
-        const clientePuntuado = {
-            'id': this.orden.cliente_id,
-            "rating": this.rating,
-        }
-        console.log(clientePuntuado);
+            }
+            ).catch(err => {
+                new cartelAviso('Ups!! algo salio mal, intenta más tarde', this.divPadre);
 
-        const profesionalDto = {
-            'id': this.orden.profecional,
-            "wallet": this.orden.precio
-        }
-        console.log(profesionalDto);
+            }).finally(f => {
+                this.cerrar(this.div);
+            });
 
-        this.cerrar(this.div);
     }
-
+   
 }
 
 

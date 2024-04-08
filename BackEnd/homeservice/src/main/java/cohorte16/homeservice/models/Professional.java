@@ -2,16 +2,15 @@ package cohorte16.homeservice.models;
 
 import cohorte16.homeservice.enums.Profession;
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.Fetch;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
+@Builder
 @Entity
 @Table(name="Profesionales")
 @Getter
@@ -70,4 +69,17 @@ public class Professional {
     @DecimalMin(value = "0.00")
     private BigDecimal wallet;
 
+    @OneToMany(mappedBy = "professional", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Order> professional;
+
+    public Professional(Long id, String name, String lastname, Profession profession, Integer rating, Long userId, String avatar, String phone) {
+
+        this.id = id;
+        this.name = name;
+        this.lastname = lastname;
+        this.profession = profession;
+        this.rating = rating;
+        this.user = new User(userId, avatar);
+        this.phone = phone;
+    }
 }

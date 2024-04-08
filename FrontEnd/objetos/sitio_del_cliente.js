@@ -8,7 +8,7 @@ saludo.innerText = Util.reuperarLogin().name ?? 'usuario';
 
 if(Util.reuperarImagen() !== null){
 const imagen = Util.reuperarImagen() ;
-console.log(imagen)
+
 const logoUser = document.querySelector('#logoUser');
 logoUser.src = imagen;
 }
