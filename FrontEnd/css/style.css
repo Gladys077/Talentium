@@ -8,7 +8,7 @@
     list-style: none;
 }
 :root {
-    --blanco_tenue: #eeebeb;
+    /* --blanco_tenue: #eeebeb;
     --azul_principal: #436ff3;
     --azul_claro: #6387f1;
     --azul_masClaro: #a6baf5;
@@ -17,7 +17,17 @@
     --azul_marino: #0e2877;
     --blue: blue;
     --blanco: #ffffff;
-    --negro: #000;
+    --negro: #000; */
+     --blanco_tenue: #fcfbf9;
+    --azul_principal: #7843f3;
+    --azul_claro: #9a71f1;
+    --azul_masClaro: #e5a6f5;
+    --azul_clarisimo: #f1cefa;
+    --azul_oscuro: #38199f;
+    --azul_marino: #2f0e77;
+    --blue: rgb(149, 0, 255);
+    --blanco: #ffffff;
+    --negro: #000; */
 }
 body {
     height: auto;

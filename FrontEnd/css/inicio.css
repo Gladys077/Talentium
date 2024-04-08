@@ -288,9 +288,9 @@ main {
             }
 
             div {
-                background-color: #97b0fae2;
+                background-color: var(--azul_claro) ;
                 padding: 20px;
-                border: 1px solid #436ff359;
+                border: 1px solid var(--azul_principal);
                 box-shadow: -2px 4px 8px rgba(82, 82, 82, 0.2);
                 height: auto;
                 line-height: 1.8em;
@@ -467,7 +467,7 @@ footer {
 
     .franja_NoCountry p {
         text-align: center;
-        background-color: #436ff3;
+        background-color: var(--azul_principal);
         height: auto; 
         min-height: 25px;
         color: white;
