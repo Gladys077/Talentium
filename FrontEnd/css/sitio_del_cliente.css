@@ -1,0 +1,108 @@
+@import url("style.css");
+@import url("aside.css");
+@import url("header_y_container.css");
+
+aside{
+    @media(max-width: 650px){
+        display: block;
+    }
+}
+
+section.header_y_container {
+    .contenidoRecuadro {
+        .botonera {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 90%;
+            justify-content: center;
+            padding: 20px;
+
+            @media (max-width: 900px) {
+                grid-template-columns: repeat(3, minmax(150px, 1fr));
+                max-width: calc(100vw - 45%);
+                height: 80%;
+            }
+            @media (max-width: 800px) {
+                grid-template-columns: repeat(2, 1fr);
+                width: 70%;
+            }
+
+            @media (max-width: 700px) {
+                padding: 10px;
+                margin: 0;
+                width: 90%;
+                max-width: (100vw - 25%);
+            }
+    
+            @media (max-width: 649px) {
+                min-width: calc(100vw - 30%);
+                height: 70vh;
+            }
+            @media (max-width: 900px) {
+                form.perfil_form {
+                    width: calc(100vw - 8%);
+                }
+            }
+
+            div {
+                background-color: var(--azul_claro);
+                border: 4px outset var(--azul_claro);
+                border-radius: 8px;
+                box-shadow: -4px 5px 5px rgba(0, 0, 0, 0.5);
+                color: var(--blanco);
+                display: grid;
+                place-content: center;
+                min-height: 80px;
+                
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(90%);
+                }
+
+                &:active {
+                    transform: scale(95%);
+                }
+
+                a {
+                    width: 16vw;
+                    height: 10vh;
+                    color: var(--blanco);
+                    font-size: 1em;
+                    display: grid;
+                    place-content: center;
+                    
+                    @media(max-width: 900px){
+                        padding: 20px;
+                        font-size: 0.9em;
+                    }
+                    @media(max-width: 650px){
+                        padding: 5px;
+                    }
+                    @media(max-width: 350px){
+                        font-size: 0.8em;
+                    }
+                    &:hover {
+                        color: var(--azul_marino);
+                    }
+                }
+
+                &:nth-child(odd) {
+                    background-color: var(--azul_principal);
+                }
+
+                @media (max-width: 800px) {
+                    &:nth-child(odd) {
+                        background-color: var(--azul_claro);
+                    }
+                    &:nth-child(1),
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                        background-color: var(--azul_principal);
+
+                    }
+                }
+            }
+        }
+    }
+}

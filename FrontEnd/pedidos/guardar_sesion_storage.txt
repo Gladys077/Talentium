@@ -1,0 +1,17 @@
+// Guardar usuario en sessionStorage
+function guardarUsuarioEnSesion(usuario) {
+  sessionStorage.setItem('usuario', JSON.stringify(usuario));
+}
+
+// Obtener usuario de sessionStorage
+function obtenerUsuarioDeSesion() {
+  const usuarioString = sessionStorage.getItem('usuario');
+  return JSON.parse(usuarioString);
+}
+
+// Ejemplo de uso
+const usuarioCreado = { nombre: 'Ejemplo', email: 'ejemplo@correo.com' };
+guardarUsuarioEnSesion(usuarioCreado);
+
+const usuarioGuardado = obtenerUsuarioDeSesion();
+console.log('Usuario guardado:', usuarioGuardado);

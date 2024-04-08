@@ -1,0 +1,19 @@
+@import url('./profesionalAceptarOrden.css');
+@import url('./profesionalListarOrden.css');
+@import url('./styleCartel.css');
+@import url('./style_cartelPuntuar.css');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+main{
+    background: linear-gradient(180deg, blue ,rgba(0, 0, 255, 0.735), white );
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+}

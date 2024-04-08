@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" modified="2024-02-26T16:14:37.097Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="3lKJzWS_GzAjRLDQh_pF" version="23.1.5" type="device">
+  <diagram name="Página-1" id="fI_DPMY1L63lRz8ookz5">
+    <mxGraphModel dx="733" dy="385" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-1" target="z-n41_c33dgVWfwWR3BQ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-1" value="inicio ordenes" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-2" target="z-n41_c33dgVWfwWR3BQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-2" value="vista ordenes" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="210" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-4" target="z-n41_c33dgVWfwWR3BQ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-4" value="cliente" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.51;exitY=0.896;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-8" target="z-n41_c33dgVWfwWR3BQ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-8" value="introduce el pedido de la orden" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="680" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-9" target="z-n41_c33dgVWfwWR3BQ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-9" value="filtrar el profesional" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-12" target="z-n41_c33dgVWfwWR3BQ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-12" value="vista de los profesionales" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="840" width="135" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-14" target="z-n41_c33dgVWfwWR3BQ-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-14" value="profesional 2" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="547.5" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-20" target="z-n41_c33dgVWfwWR3BQ-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-20" value="aceptan la orden colocando un precio" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="547.5" y="1030" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-25" target="z-n41_c33dgVWfwWR3BQ-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-25" target="z-n41_c33dgVWfwWR3BQ-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-25" value="vuelve a la vista del cliente" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1030" width="137.5" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="900" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="71" y="1085" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-27" value="cancelar" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="101.25" y="1055" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-30" target="z-n41_c33dgVWfwWR3BQ-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-30" value="acepta la solicitud y realiza el pago" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="318.75" y="1245" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-32" target="z-n41_c33dgVWfwWR3BQ-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-32" value="vuelve al profesional para que vaya a realizar el trabajo" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-45" target="z-n41_c33dgVWfwWR3BQ-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-45" target="z-n41_c33dgVWfwWR3BQ-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-45" value="va a realizar el trabajo" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1370" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-47" target="z-n41_c33dgVWfwWR3BQ-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-47" value="cancela el trabajo" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-49" target="z-n41_c33dgVWfwWR3BQ-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-49" value="realiza el trabajo y califica al cliente" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="z-n41_c33dgVWfwWR3BQ-53" target="z-n41_c33dgVWfwWR3BQ-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-53" value="cliente realiza su conformidad calificando al profesional " style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1600" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-55" value="se le libera el pago al profesional" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z-n41_c33dgVWfwWR3BQ-57" value="califica al cliente" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1400" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

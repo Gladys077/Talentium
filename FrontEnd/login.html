@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.ico" type="icon">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Ingreso-Login</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="loader"></div>
+    </div>
+    <div id="registro_opciones">
+
+        <div id="volverbutton" class="volver">
+            <img src="img/flecha_izq.png" alt="">
+            <p><span>Volver</span></p>
+        </div>
+        <div class="login_card">
+            <img src="img/NoAvatar.png" alt="avatar" class="avatar">
+            <input type="email" id="email" placeholder="Ingrese su e-mail" required>
+            
+                <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+                <div class="eye_container open" id="eye_container">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                
+            <button class="login_button"><a id="login">Ingresar</a></button>
+        </div>
+    </div>
+
+   
+
+
+<script type="module" src="objetos/login.js" defer></script>
+<script type="module" src="objetos/loader/loader.js"></script>
+
+
+
+</body>
+</html>

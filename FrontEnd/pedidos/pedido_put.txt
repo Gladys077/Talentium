@@ -1,0 +1,26 @@
+async function actualizarMedico(id, nombre, apellido) {
+  const url = `http://localhost:8080/medicos/${id}`;
+  const data = {
+    nombre: nombre,
+    apellido: apellido
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      return true; // La actualización del médico fue exitosa
+    } else {
+      return false; // Hubo un error al actualizar los datos del médico
+    }
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+    return false; // Hubo un error al realizar la solicitud
+  }
+}

@@ -1,0 +1,131 @@
+@import url(../../css/style.css);
+
+h3{
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: 18px;
+}
+
+
+
+.contenido-metodo-pago{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    .resumen-compra{
+        width: 100%;
+        height: 300px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        color:var(--azul_clarisimo);
+        background-color: var(--azul_oscuro);
+        text-align: left;
+        padding: 10%;
+        margin: 5%;
+        border-radius: 20px;
+
+        div.avatarProfesional {
+            display: grid;
+            margin: auto;
+
+            img.img_Profesional {
+                width: 70px;
+                height: 70px;
+                border: 5px double var(--azul_principal);
+                border-radius: 50%;
+                background-color: var(--azul_clarisimo);
+                margin: 2px auto 5px;
+            }
+
+            h4 {
+                width: auto;
+                max-width: 100%;
+                text-align: center;
+                padding: 5px 15px;
+                margin-bottom: 5px;
+                background-color: var(--azul_marino);
+                border-radius: 20px;
+                font-size: .75em;
+                font-weight: 200;
+                overflow: hidden;
+            }
+           
+            
+        }/*fin avatar profesional*/
+
+        p{
+            font-size: 0.9em;
+            font-weight: bolder;
+        }
+    }/*fin resumen-compra*/
+
+    .metodo-pago{
+        width: 100%;
+        height: 300px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: auto;
+        text-align: left;
+        white-space: 1em;
+        padding: 10%;
+        margin: 5%;
+        border-radius: 20px;
+
+        .img-formapago{
+            width: 50vw;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5); 
+        }/*fin img-formapago*/ 
+
+    }/*fin metodo-pago*/
+
+    @media (max-width: 650px) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            .metodo-pago{
+                .img-formapago{
+                    width: 90%;
+                }
+            }
+    }
+
+}/*fin contenido-metodo-pago*/
+
+
+.boton_centrado {
+    width: 90%;
+    background-color: var(--azul_principal);
+    color: var(--blanco_tenue);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    border: 4px outset var(--azul_claro);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bolder;
+
+    a {
+        display: block;
+        color: var(--blanco);
+    }
+    &:hover {
+        background-color: var(--azul_oscuro);
+    }
+    &:active {
+        transform: scale(95%);
+    }
+}
+
+
+
+/*
+
+
+
+*/

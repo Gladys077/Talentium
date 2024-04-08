@@ -1,0 +1,28 @@
+
+javascript
+async function crearMedico(nombre, apellido) {
+  const url = 'http://localhost:8080/medicos';
+  const data = {
+    nombre: nombre,
+    apellido: apellido
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      return true; // La respuesta de la API fue exitosa
+    } else {
+      return false; // Hubo un error al introducir los datos
+    }
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+    return false; // Hubo un error al realizar la solicitud
+  }
+}

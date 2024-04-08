@@ -1,0 +1,25 @@
+async function borrarLogicoMedico(id) {
+  const url = `http://localhost:8080/medicos/${id}`;
+  const data = {
+    activo: false
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      return true; // El borrado lógico del médico fue exitoso
+    } else {
+      return false; // Hubo un error al intentar realizar el borrado lógico
+    }
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+    return false; // Hubo un error al realizar la solicitud
+  }
+}

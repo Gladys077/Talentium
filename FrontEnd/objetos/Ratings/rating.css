@@ -1,0 +1,78 @@
+@import url("../../css/style.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgba(30, 43, 132, 0.605);
+}
+.container {
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.container::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black
+    no-repeat center center / cover;
+  filter: blur(7px) brightness(70%);
+}
+.info {
+  margin-bottom: 2rem;
+
+}
+.emoji {
+  font-size: 3.5rem;
+  height: 35px;
+  margin-bottom: 2rem;
+}
+.status {
+  font-size: 2rem;
+  color: honeydew;
+  line-height: 1.3em;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.star {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.star svg {
+  fill: none;
+  width: 100%;
+  height: 100%;
+  stroke: none;
+  fill: gray;
+}
+
+.selected svg,
+.selected ~ .star svg {
+  fill: #ffc107;
+}
+.star:hover svg,
+.star:hover ~ .star svg {
+  fill: gold;
+}

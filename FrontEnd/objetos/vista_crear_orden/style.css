@@ -1,0 +1,15 @@
+@import url('./CrearOrden.css');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+main{
+    background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}

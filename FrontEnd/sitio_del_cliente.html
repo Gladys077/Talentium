@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.ico" type="icon">
+    <link rel="stylesheet" href="css/sitio_del_cliente.css">
+    <title>Talentium - Sitio del Cliente</title>
+</head>
+
+<body>
+    <input type="checkbox" id="check" class="btnMenu">
+    <label for="check" class="checkbtn">
+        <i class="menu"><img src="img/icono-menu.png" alt="menu" width="40px" height="40px" z-index="3"></i>
+    </label>
+    <aside class="aside">
+        <img  class="logo" src="img/Logo1.png" alt="logo">
+        <div class="avatarCliente">
+            <img id="logoUser" class="img_Cliente" src="img/NoAvatar.png" alt="avatar">
+            <h4>Cliente</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><img src="img/home.png" alt="home"><a href="sitio_del_cliente.html">Inicio</a></li>
+                <li><img src="img/ordenes.png" alt="órdenes"><a href="clien_orden_crearYlistado.html">Ordenes</a></li>
+                <li><img src="img/agenda.png" alt="agenda"><a>Agenda</a></li>
+                <li><img src="img/soporte.png" alt="soporte"><a>Soporte</a></li>
+
+                <li class="cerrar"><img src="img/cerrar.png" alt="">
+                    <p><a id="cerrarSesion" href="index.html">Cerrar sesión</a></p>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="header_y_container">
+        <div class="hola_buscador">
+            <h4>Hola <span>Usuario</span></h4>
+            <form id="buscador" action="/tu-pagina-de-busqueda" method="get">
+                <label for="search"><img src="img/lupa.png" alt="lupa"></label>
+                <input class="buscador" type="text" id="search" name="q" placeholder="Escribe tu búsqueda">
+                <!-- <input type="submit" value="Buscar"> -->
+            </form>
+        </div>
+        <div class="recuadro">
+            <div id="volverbutton" class="volver" >
+                <img src="img/flecha_izq.png" alt="">
+                <span>Volver</span>
+            </div>
+            <div class="contenidoRecuadro">
+                <div class="botonera">
+                    <div><a href="actualiza_perfil_cliente.html">Perfil</a></div>
+                    <div><a href="clien_lista_ordenes.html">Lista de mis órdenes</a></div>
+                    <div><a href="crear_orden.html">Crear nueva orden</a></div>
+                    <div><a href="ordenes_aceptadas _cliente.html">Ordenes aceptadas</a></div>
+                    <div><a href="ordenes_pendientes _cliente.html">Ordenes pendientes</a></div>
+                    <div><a href="ordenes_completadas_cliente.html">Ordenes completadas</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <script type="module" src="objetos/sitio_del_cliente.js"></script>
+</body>
+
+</html>

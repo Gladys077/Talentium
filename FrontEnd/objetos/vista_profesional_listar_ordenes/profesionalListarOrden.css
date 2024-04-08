@@ -1,0 +1,62 @@
+
+
+#front {
+  max-width: 1000px;
+  width: min(90%,50em);
+  height: 80vh;
+  gap: 18px;
+  background-color: var(--azul_principal);
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.8);
+  padding: 30px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  translate: -50% 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  hyphens: auto;
+  overflow-y: auto;
+  
+  .CrearOrden {
+    box-shadow: -2px 2px 3px 2px rgba(253, 251, 251, 0.477);
+    border-radius: 8px;
+    min-width: 16em;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    display: grid;
+    justify-content: baseline;
+    align-items: center;
+    transition: background-color 0.3s transform 0.2s;
+    position: relative;
+    text-align: left;
+    background-color: var(--azul_oscuro);
+
+    
+
+    textarea,
+    input,
+    button {
+      display: none;
+    }
+
+    &:hover {
+      background-color: var(--azul_claro);
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    div {
+      display: block;
+
+      
+    
+    }
+  }
+
+}

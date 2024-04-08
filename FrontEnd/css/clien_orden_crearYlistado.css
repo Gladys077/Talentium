@@ -1,0 +1,52 @@
+@import url("style.css");
+@import url("aside.css");
+@import url("header_y_container.css");
+
+
+section.header_y_container {
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+                padding: 0px;
+                margin: 0;
+
+                @media(max-width: 768px){
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                a {
+                    width: 30%;
+                    min-width: 180px;
+                    height: 200px;
+                    display: grid;
+                    place-content: center;
+                    padding: 20px;
+                    background-color: var(--azul_oscuro);
+                    border: 6px outset var(--azul_claro);
+                    border-radius: 8px;
+                    box-shadow: -4px 5px 5px rgba(0, 0, 0, 0.5);
+                    color: var(--blanco);
+                    line-height: 2em;
+
+                    @media(max-width: 768px){
+                        width: 60%;
+                        height: 160px;                    }
+                    &:hover {
+                        background-color: var(--azul_principal);
+                    }
+                    &:active {
+                        transform: scale(95%);
+                    }
+                    p {
+                        margin-bottom: 15px;
+                        font-size: 1.1em;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

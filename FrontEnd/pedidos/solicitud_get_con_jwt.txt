@@ -1,0 +1,15 @@
+// Obtener el token del almacenamiento local
+const jwtToken = localStorage.getItem('jwtToken');
+
+// Realizar una solicitud GET a una API protegida adjuntando el token en el encabezado de autorización
+fetch('https://tu-api.com/recurso-protegido', {
+  headers: {
+    'Authorization': `Bearer ${jwtToken}`
+  }
+})
+.then(response => {
+  // Manejar la respuesta de la API
+})
+.catch(error => {
+  // Manejar errores
+});

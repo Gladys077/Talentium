@@ -1,0 +1,67 @@
+@import url("../../css/style.css");/*importé mis estilos*/
+
+#CrearOrden {
+  max-width: 300px;
+  min-width: 280px;
+  height: 350px;
+  display: grid;
+  grid-template-rows: 3;
+  gap: 15px;
+  background-color: var(--azul_principal);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+ 
+  overflow: auto;
+
+  textarea {
+    max-width: 70%;
+    max-height: fit-content;
+    text-align: center;
+    opacity: 80%;
+    margin-bottom: 15px;
+    padding: 3px;
+    box-shadow: 0px 2px 2px rgba(251, 245, 245, 0.364);
+    border-radius: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+  }
+
+  button {
+    background-color: var(--azul_oscuro);
+    max-width: 75%;
+    min-height: 2em;
+    padding: 0px;
+    border-radius:15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.364);
+    cursor: pointer;
+    color: var(--blanco);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+    &:active {
+      transform: scale(95%);
+    }
+    &:first-child {
+      width: 20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: .5em;
+      border: none;
+      border-radius: 0;
+      font-weight: 800;
+
+      &:hover {
+        background-color: var(--azul_oscuro);
+
+        &:active {
+          transform: scale(95%);
+        }
+      }
+    }
+  }
+}

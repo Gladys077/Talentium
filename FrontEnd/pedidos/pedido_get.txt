@@ -1,0 +1,23 @@
+javascript
+async function obtenerMedicos() {
+  const url = 'http://localhost:8080/medicos';
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      const listaMedicos = await response.json();
+      return listaMedicos;
+    } else {
+      throw new Error('Error al obtener la lista de médicos');
+    }
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+    return null;
+  }
+}

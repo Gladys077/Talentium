@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---->    <script src="https://kit.fontawesome.com/2d9fe71672.js" crossorigin="anonymous"></script>
+    <!---->    <link rel="icon" href="img/Icon.ico" type="icon">
+               <link rel="stylesheet" href="./css/actualiza_perfil_cliente.css">
+    <!---->    <script src="./objetos/menu/menu.js" defer></script>
+    <!---->    <script src="./objetos/vista_Plataforma_pago/plataforma-pago.js" defer></script>
+        <title>Talentium - Plataforma de Pago</title>
+    </head>
+
+    <body>
+        
+        <aside class="aside"> 
+
+            <div class="logo_y_cliente">
+                <img class="logo" src="img/Logo1.png" alt="logo">
+                <div class="avatarCliente">
+                    <img class="img_Cliente" src="img/NoAvatar.png" alt="avatar">
+                    <h4>Cliente</h4>
+                </div>
+            </div>
+            <nav>
+    <!--agregue nombre clases-->           
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><img src="img/home.png" alt="home"><a href="index.html" class="nav-menu-link nav-link">Inicio</a></li>
+                    <li class="nav-menu-item"><img src="img/datos.png" alt="datos"><a href="datos.html" class="nav-menu-link nav-link">Datos</a></li>
+                    <li class="nav-menu-item"><img src="img/ordenes.png" alt="órdenes"><a href="clien_orden_crearYlistado.html" class="nav-menu-link nav-link">Ordenes</a></li>
+                    <li class="nav-menu-item"><img src="img/agenda.png" alt="agenda"><a href="agenda.html" class="nav-menu-link nav-link">Agenda</a></li>
+                    <li class="nav-menu-item"><img src="img/soporte.png" alt="soporte"><a href="soporte.html" class="nav-menu-link nav-link">Soporte</a></li>
+
+                    <li class="cerrar"><img src="img/cerrar.png" alt="">
+                        <p><a href="index.html">Cerrar sesión</a></p>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="header_y_container">
+    
+            <div class="hola_buscador">
+
+                <h4>Hola <span>Usuario</span></h4>
+                <form action="/tu-pagina-de-busqueda" method="get">
+                    <label for="search"><img src="img/lupa.png" alt="lupa"></label>
+                    <input class="buscador" type="text" id="search" name="q" placeholder="Escribe tu búsqueda">
+                    <!-- <input type="submit" value="Buscar"> -->
+                </form>
+    <!---->     <button class="nav-toggle">
+    <!---->     <i class="fas fa-bars"></i>
+    <!---->     </button>
+
+            </div>
+
+            <div class="recuadro">
+                <div class="volver">
+                    <img src="img/flecha_izq.png" alt="">
+                    <p><a href="index.html">Volver</a></p>
+                </div>
+                <div class="contenidoRecuadro">
+                    <h2>Selecciona Forma de Pago</h2>
+                    <div class="contenido-metodo-pago">
+                        
+                        <div class="resumen-compra">
+                        <!--Todo esto se genera con js utilizando innerHTML, donde recupera los datos de bbdd con fetch
+                            
+                            <h3>Resumen de Compra</h3>
+                            <div class="avatarProfesional">
+                                <img class="img_Profesional" src="img/NoAvatar.png" alt="Foto del Profesional">
+                                <h4>Profesional</h4>
+                                <h4>Rating</h4>
+                            </div>
+                            <p>Servicio:</p>
+                            <p>Fecha Visita:</p>
+                            <p>Precio:</p>-->
+
+                        </div>
+                        <div class="metodo-pago"><!--No sé si corresponde que vaya, si es así cada opción debe llevar a la plataforma 
+                                                     de pago correspondiente donde la empresa debe estar registrada para poder acceder
+                                                     a la misma. Una vez finalizado el pago debe aparecer una página de confirmación de 
+                                                     pago realizado exitosamente -->
+                            <div>
+                                <h3>Medios de Pagos Habilitados</h3>
+                            </div>
+                            <div>
+                                <h4><input type="radio" name="check" id="credito"> Crédito</input></h4>
+                                <h4><input type="radio" name="check" id="debito"> Débito</input></h4>
+                                <h4><input type="radio" name="check" id="efectivo"> Efectivo</input></h4>
+                                <h4><input type="radio" name="check" id="transferencia"> Transferencia</input></h4>
+                            </div>
+                            <div>
+                                <button class="boton_centrado">Continuar</button>
+                            </div>
+                            
+                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </body>
+
+</html>

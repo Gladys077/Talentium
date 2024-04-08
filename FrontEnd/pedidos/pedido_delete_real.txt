@@ -1,0 +1,18 @@
+async function borrarMedico(id) {
+  const url = `http://localhost:8080/medicos/${id}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'DELETE'
+    });
+
+    if (response.ok) {
+      return true; // La eliminación del médico fue exitosa
+    } else {
+      return false; // Hubo un error al intentar eliminar el médico
+    }
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+    return false; // Hubo un error al realizar la solicitud
+  }
+}
